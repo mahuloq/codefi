@@ -1,0 +1,14 @@
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {margin:20px;
+    color: teal;
+}
+
+header {
+    background-color: wheat;
+    padding: 5px;
+}
