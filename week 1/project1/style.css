@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* element selector */
+
+* {
+  font-family: "Roboto";
+}
+a:visited {
+  color: darkblue;
+}
+p {
+  color: black;
+  font-size: 2rem;
+}
+
+ul li {
+  display: block;
+  flex-direction: column;
+}
+
+body {
+  background-color: brown;
+  text-align: center;
+}
+
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+/* id */
+
+/* classes */
