@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>conditonals, flows, and loops</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dogs-list"></div>
+
+    <script>
+      // const name = prompt("What is your name?");
+      const userName = "chrisoncode";
+
+      // If
+
+      // if (name == "nick" || name == "chris") {
+      //   alert("Hello!");
+      // } else if (name == "holly") {
+      //   console.log("this is holly");
+      // } else {
+      //   console.log("not recognized");
+      // }
+
+      //for loop
+      const dogsList = document.querySelector(".dogs-list");
+      const dogs = [
+        { name: "bruce", type: "chihuahua" },
+        { name: "chance", type: "bernse" },
+      ];
+
+      // for (let i = 0; i < dogs.length; i++) {
+      //   console.log(dogs[i]);
+      //   //grab the dog
+      //   const dog = dogs[i];
+
+      //   const dogData = document.createElement("div");
+      //   dogData.classList.add("text-center");
+      //   dogData.innerText = `${dog.name} is a ${dog.type}`;
+      //   dogsList.appendChild(dogData);
+      // }
+
+      //while loop
+      // let i = 0;
+      // while (i < dogs.length) {
+      //   console.log(dogs[i]);
+      //   //grab the dog
+      //   const dog = dogs[i];
+
+      //   const dogData = document.createElement("div");
+      //   dogData.classList.add("text-center");
+      //   dogData.innerText = `${dog.name} is a ${dog.type}`;
+      //   dogsList.appendChild(dogData);
+      //   i++;
+      // }
+
+      //do while loop
+
+      // let i = 0;
+      // do {
+      //   //grab the dog
+      //   const dog = dogs[i];
+      //   const dogData = document.createElement("div");
+      //   dogData.classList.add("text-center");
+      //   dogData.innerText = `${dog.name} is a ${dog.type}`;
+      //   dogsList.appendChild(dogData);
+      //   i++;
+      // } while (i < dogs.length);
+
+      // for .. of iterator
+
+      for (let dog of dogs) {
+        const dogData = document.createElement("div");
+        dogData.classList.add("text-center");
+        dogData.innerText = `${dog.name} is a ${dog.type}`;
+        dogsList.appendChild(dogData);
+      }
+    </script>
+  </body>
+</html>
