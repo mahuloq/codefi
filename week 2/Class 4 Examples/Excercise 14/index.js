@@ -24,6 +24,5 @@ function areBracketsBalanced(s) {
 
 let expr = "()";
 
-// Function call
 if (areBracketsBalanced(expr)) console.log("Balanced");
 else console.log("Not Balanced");
