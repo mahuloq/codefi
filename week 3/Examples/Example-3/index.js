@@ -5,6 +5,7 @@ function makeAdder(x) {
 
   return add;
 }
+
 var plusFour = makeAdder(4);
 console.log(plusFour(10));
 console.log(plusFour(40));
