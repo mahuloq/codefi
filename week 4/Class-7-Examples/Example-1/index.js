@@ -1,43 +1,38 @@
 class Subject {
-  observers = [];
-
-  subscribe(value) {
+  constructor() {
+    this.observers = [];
+  }
+  addObserver(value) {
     this.observers.push(value);
   }
 
-  unsubscribe(fn) {
-    index = this.observers.indexOf(fn);
-    this.observers.splice(index, 1);
-  }
-
-  notify() {
-    this.observers.forEach((element) => {
-      observer();
+  removeObserver(fn) {
+    this.observers = this.observers.filter(function (test) {
+      return test !== fn;
     });
   }
+  // removeObserver(observer)
+  // this.observers = this.observers.filter(sub => sub !== observer)
+
+  notifyObserverse() {
+    this.observers.forEach((sub) => sub.update());
+  }
 }
-const subject = new Subject();
 
-const observer = () => {
-  console.log("This is an observer");
-};
+// this.observers.forEach(sub => sub.update())
 
-const observer2 = () => {
-  console.log("This is an observer");
-};
+class Observer {
+  update() {
+    console.log("Observer updated!");
+  }
+}
 
-const observer3 = () => {
-  console.log("This is an observer");
-};
+let testSubject = new Subject();
 
-subject.subscribe(observer);
+let obs1 = new Observer();
 
-subject.subscribe(observer3);
+let obs2 = new Observer();
 
-subject.subscribe(observer2);
+let obs3 = new Observer();
 
-subject.notify();
-
-// subject.unsubscribe(observer);
-
-subject.notify();
+let obs4 = new Observer();
